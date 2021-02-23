@@ -7,4 +7,9 @@ describe('WordNumber#convert_num') do
   number = WordNumber.new(3)
   expect(number.convert_num()).to(eq("three"))
   end
+
+  it("returns a word for teens number") do
+  number = WordNumber.new(13)
+  expect(number.convert_num()).to(eq("thirteen"))
+  end
 end
