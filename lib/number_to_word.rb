@@ -2,8 +2,12 @@ class WordNumber
   def initialize(number)
     @number = number
   end
-  def convert_num
-  end    
+  def convert_num()
+    ones = Hash.new
+    ones = {1 => "one", 2=> "two", 3=> "three"}
+    @word = ones.fetch(@number)
+  end 
+  @word
 end
 
 # ones - one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve
