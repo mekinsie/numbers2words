@@ -14,7 +14,12 @@ describe('WordNumber#convert_num') do
   end
 
   it("returns a word for tens number") do
-  number = WordNumber.new(21)
-  expect(number.convert_num()).to(eq("twenty one"))
+  number = WordNumber.new(99)
+  expect(number.convert_num()).to(eq("ninety nine"))
   end
+
+  it("returns a word for hundreds number") do
+    number = WordNumber.new(102)
+    expect(number.convert_num()).to(eq("one hundred two"))
+    end
 end
